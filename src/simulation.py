@@ -2,7 +2,7 @@
 
 import math
 from typing import Self
-import constants
+from constants import initialConditions, physicsConstants
 
 class BodyVector:
     """stores a single 3D vector"""
@@ -93,3 +93,15 @@ Previous Position: {self.prevPos}
     def setAcceleration(self, a: BodyVector) -> None:
         """takes a BodyVector; gives it to the Body"""
         self.accel = a
+
+
+
+## list of N bodies, where N is physicsConstants.N
+bodies = [Body(initialConditions.massDist,
+               BodyVector(initialConditions.posDist,
+                          initialConditions.posDist,
+                          initialConditions.posDist),
+               BodyVector(initialConditions.velDist,
+                          initialConditions.velDist,
+                          initialConditions.velDist))
+          for i in range(physicsConstants.N)]
