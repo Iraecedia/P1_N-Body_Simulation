@@ -6,7 +6,7 @@ class physicsConstants:
     N = 10
     scalableFactor = 1
 
-class initalConditions:
+class initialConditions:
     massDist = np.random.normal(loc=4, scale=2, size=physicsConstants.N)
     posDist = np.random.exponential(scale=4, size=physicsConstants.N)
     velDist = np.random.exponential(scale=1, size=physicsConstants.N)
