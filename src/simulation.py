@@ -104,4 +104,7 @@ bodies = [Body(initialConditions.massDist,
                BodyVector(initialConditions.velDist,
                           initialConditions.velDist,
                           initialConditions.velDist))
-          for i in range(physicsConstants.N)]
+          for _ in range(physicsConstants.N)]
+
+
+print(bodies)
